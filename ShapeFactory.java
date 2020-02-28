@@ -13,6 +13,7 @@ public class ShapeFactory {
    public Paint paint;
    public int width = 25;
    public int height = 25;
+   // created class ShapeFactory where we indicate the height and width of the figures
 
    public ShapeFactory(int shape_type) {
       switch(shape_type / 3) {
@@ -43,6 +44,7 @@ public class ShapeFactory {
       case 9:
          this.shape = new java.awt.geom.Arc2D.Double((double)(-this.width) / 2.0D, (double)(-this.height) / 2.0D, (double)this.width, (double)this.height, 30.0D, 300.0D, 2);
       }
+      // using the switch statement, we select the type of figure to be displayed
 
       switch(shape_type % 4) {
       case 1:
@@ -64,7 +66,7 @@ public class ShapeFactory {
       case 8:
          this.paint = Color.red;
       }
-
+// using the switch operator we select the thickness of the frames of our figure
    }
 
    private static Shape createStar(int arms, Point center, double rOuter, double rInner) {
