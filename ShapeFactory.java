@@ -15,7 +15,7 @@ public class ShapeFactory {
    public int height = 25;
 
    public ShapeFactory(int shape_type) {
-      switch(shape_type / 10) {
+      switch(shape_type / 3) {
       case 1:
          this.shape = createStar(3, new Point(0, 0), (double)this.width / 2.0D, (double)this.width / 2.0D);
          break;
@@ -44,7 +44,7 @@ public class ShapeFactory {
          this.shape = new java.awt.geom.Arc2D.Double((double)(-this.width) / 2.0D, (double)(-this.height) / 2.0D, (double)this.width, (double)this.height, 30.0D, 300.0D, 2);
       }
 
-      switch(shape_type % 10) {
+      switch(shape_type % 4) {
       case 1:
          this.stroke = new BasicStroke(3.0F);
          break;
