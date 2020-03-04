@@ -9,6 +9,12 @@ import java.awt.geom.AffineTransform;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
+/**
+ * Date: Oct 14-2015
+ * Creation of rules for displaying graphic objects
+ * @author John
+ * @version 1.52
+ */
 public class TitlesPanel extends JPanel implements ActionListener {
    private Graphics2D g2d;
    private Timer animation;
