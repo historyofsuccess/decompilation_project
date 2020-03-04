@@ -6,16 +6,43 @@ import java.awt.Point;
 import java.awt.Shape;
 import java.awt.geom.GeneralPath;
 import java.awt.geom.Rectangle2D.Double;
-
+/**
+ * Date: Oct 14-2015
+ * This is application for created some figure
+ * @author John
+ * @version 1.52
+ * 
+ */
 public class ShapeFactory {
-   public Shape shape;
-   public BasicStroke stroke = new BasicStroke(3.0F);
-   public Paint paint;
-   public int width = 25;
-   public int height = 25;
+	
+   /**
+ * Set the shape variable for further interaction with forms
+ */
+public Shape shape;
+   /**
+ * Set the variable and value of the main move
+ */
+public BasicStroke stroke = new BasicStroke(3.0F);
+   /**
+ * Create a shape fill color variable  
+ */
+public Paint paint;
+   /**
+ * Create a shape width variable
+ */
+public int width = 25;
+   /**
+ * Create a shape height variable
+ */
+public int height = 25;
    // created class ShapeFactory where we indicate the height and width of the figures
 
-   public ShapeFactory(int shape_type) {
+   /**
+ * @param shape_type
+ *  Сreate a form selection algorithm with the switch statement and than same with stroke
+ */
+
+public ShapeFactory(int shape_type) {
       switch(shape_type / 3) {
       case 1:
          this.shape = createStar(3, new Point(0, 0), (double)this.width / 2.0D, (double)this.width / 2.0D);
@@ -44,7 +71,7 @@ public class ShapeFactory {
       case 9:
          this.shape = new java.awt.geom.Arc2D.Double((double)(-this.width) / 2.0D, (double)(-this.height) / 2.0D, (double)this.width, (double)this.height, 30.0D, 300.0D, 2);
       }
-      // using the switch statement, we select the type of figure to be displayed
+  
 
       switch(shape_type % 4) {
       case 1:
